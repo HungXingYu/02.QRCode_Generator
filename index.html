@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>BarCode and QRCode Generator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+  <body>
+    <div class='container '>
+        <div class="row">
+            <header class="col-12">
+                  <nav>
+                        <p class="nav-title h1">BarCode and QRCode Generator.</p>
+                  </nav>
+            </header>
+      </div>   
+
+    <h4 class="p-3 mt-3  text-center">
+        <p class=" nav-title">車種</p>
+        <hr>
+        <p class="h6">(四項資訊分別產生對應的BarCode及以分號連接合併產生QRCode)</p>
+    </h4>
+    <div class='row ' >
+        <div id="Data-input" class='col-md d-flex flex-column'>
+            <table class='table text-nowrap'>
+                <tbody>
+                    <tr>
+                        <td class='text-right'>車種年度：</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class='text-right'>車種名稱：</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class='text-right'>最高速限：</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class='text-right'>客戶SKU：</td>
+                        <td><input type="text"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class='btn btn-outline-danger'>Encode</button>
+        </div>
+
+        <div id="BarCodePanel" class='col-md text-center '>
+            <div id='BarCodes' class='border border-dark'>
+                <div><svg id="barcode1"></svg></div>
+                <div><svg id="barcode2"></svg></div>
+                <div><svg id="barcode3"></svg></div>
+                <div><svg id="barcode4"></svg></div>
+            </div>                
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button class='btn btn-outline-info btn-Download'>Download</button>
+                <button class='btn btn-outline-info btn-Print'>Print</button>
+                <button class='btn btn-outline-info btn-Clear'>Clear</button>
+            </div>
+        </div>
+            
+        <div id='QRCodePanel' class='col-md text-center'>
+            <div id="QRCode" class='border border-dark'>
+                <div id="jquery-qrcode-image" >
+                </div>
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button class='btn btn-outline-info btn-Download'>Download</button>
+                <button class='btn btn-outline-info btn-Print'>Print</button>
+                <button class='btn btn-outline-info btn-Clear'>Clear</button>
+            </div>             
+        </div>           
+    </div>
+    <hr>
+    <h4 class="p-3 text-center">
+        <p class=" nav-title">車架</p>
+        <hr>
+        <p class="h6">(僅單一資訊產生對應的BarCode及QRCode)</p>
+    </h4>
+    <div class="row">
+        <div id="Data-input2" class='col-md d-flex flex-column'>
+            <table class='table text-nowrap'>
+                <tbody>
+                    <tr>
+                        <td class='text-right'>車架號碼：</td>
+                        <td><input type="text"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class='btn btn-outline-danger'>Encode</button>
+        </div>
+
+        <div id="BarCodePanel2" class='col-md text-center '>
+            <div id='BarCodes2' class='border border-dark'>
+                <div><svg id="barcode"></svg></div>
+            </div>                
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button class='btn btn-outline-info btn-Download'>Download</button>
+                <button class='btn btn-outline-info btn-Print'>Print</button>
+                <button class='btn btn-outline-info btn-Clear'>Clear</button>
+            </div>
+        </div>
+            
+        <div id='QRCodePanel2' class='col-md text-center'>
+            <div id="QRCode2" class='border border-dark'>
+                <div id="jquery-qrcode-image2" >
+                </div>
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button class='btn btn-outline-info btn-Download'>Download</button>
+                <button class='btn btn-outline-info btn-Print'>Print</button>
+                <button class='btn btn-outline-info btn-Clear'>Clear</button>
+            </div>             
+        </div>
+    </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery-qrcode-0.17.0.min.js"></script>
+    <script src="JsBarcode.all.min.js"></script>
+    <script src=main.js></script>
+  </body>
+</html>
