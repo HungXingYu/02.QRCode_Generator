@@ -1,0 +1,84 @@
+html,
+body {
+    font-family: "Lato", "Noto Sans TC", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    background-color: #f6f7f8;
+    min-width: 540px;
+}
+
+/* Header */
+header {
+    height:100px;
+    color: #666666;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+}
+
+nav {
+    height: 100%;
+    padding: 0 20px;
+}
+
+.nav-title {
+    font-weight: bold;
+    letter-spacing: 1px;
+    vertical-align: middle;
+}
+
+/*小標題*/
+h4 {
+    background-color: #FBBA59;
+    color: #160A06;
+    font-weight:bolder;
+}
+
+.row > div {
+    margin: 15px;
+    border: 1px #000 solid;
+    padding: 15px;
+}
+
+#Data-input  table {
+    height: 280px;
+}
+
+#Data-input table > tbody > tr .text-right,
+#Data-input2 table > tbody > tr .text-right {
+    width: 10px;
+}
+
+#Data-input table > tbody > tr > td > input,
+#Data-input2 table > tbody > tr > td > input {
+    width: 100%;
+}
+
+#BarCodes , #BarCodes2 {
+    height: 280px;
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+
+#BarCodes div ,
+#BarCodes2 div{
+    padding-bottom: 10px;
+}
+
+#jquery-qrcode-image , #jquery-qrcode-image2 {
+    padding: 10px;
+}
+
+#QRCode , #QRCode2 {
+    height: 280px;
+    margin-bottom: 15px;
+}
+
+
+/*RWD*/
+/*寬度大於等於990px時*/
+@media (min-width: 990px) { 
+    header {
+        height: 60px;
+    }
+}
+
